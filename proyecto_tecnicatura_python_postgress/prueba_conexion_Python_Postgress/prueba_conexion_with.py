@@ -18,9 +18,8 @@ try:
         with conexion.cursor() as cursor:
             sentencia = 'SELECT * FROM persona'
             cursor.execute(sentencia)
-
-    registros = cursor.fetchall()
-    print(registros)
+            registros = cursor.fetchall()
+            print(registros)
 except Exception as e:
     print(f'Ha ocurrido un error: {e}')
 finally:
